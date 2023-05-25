@@ -9,9 +9,9 @@ add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 apt install pika-sources.deb --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confnew"
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://gitlab.com/Jhyub/supergfxctl-plasmoid -b v1.3.0
+cp -rvf ./debian ./supergfxctl-plasmoid/
+cd ./supergfxctl-plasmoid/
 
 # Get build deps
 ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
